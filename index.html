@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
-  </head>
-  <body>
-    <p>Hello world!</p>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>PaintStore</title>
+  <base href="https://thumb-up-app.github.io/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles.843c3863541e278b5ec7.css">
+</head>
+
+<body>
+  <app-root></app-root>
+  <script>
+    (function () {
+      // Retrieve the URL the user was trying to access when receiving the 404.
+      var redirect = sessionStorage.redirect;
+      // Remove the URL from sessionStorage.
+      delete sessionStorage.redirect;
+      // Check if we actually need to redirect.
+      if (redirect && redirect != location.href) {
+        // We need to redirect to the URL the user was trying to access.
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+  <script type="text/javascript" src="runtime.ec2944dd8b20ec099bf3.js"></script>
+  <script type="text/javascript" src="polyfills.51ae42b7cd5ce7eb790c.js"></script>
+  <script type="text/javascript" src="scripts.806effac119676237f10.js"></script>
+  <script type="text/javascript" src="main.fb0b3dd62f74eaa1b533.js"></script>
+</body>
+
 </html>
